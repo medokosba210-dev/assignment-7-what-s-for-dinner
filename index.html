@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>What's For Dinner?</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+
+                <div>
+                    <h2>What's For Dinner</h2>
+                    <p>Your daily meal inspiration</p>
+                </div>
+
+            </div>
+
+            <div class="nav-actions">
+
+                <button class="nav-btn" id="bookmarkBtn" title="Bookmark">
+                    <i class="fa-solid fa-bookmark"></i>
+                </button>
+
+                <button class="nav-btn" id="historyBtn" title="History">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                </button>
+
+                <button class="nav-btn" id="settingsBtn" title="Settings">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+
+                <div class="profile">
+                    <img src="https://i.pravatar.cc/100?img=12" alt="Profile">
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    
+
+    <main class="main-container">
+
+        <section class="recipe-card">
+
+            
+
+            <div class="recipe-image">
+
+                <img id="mealImage" src="" alt="Recipe">
+
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <strong id="mealRating">4.5</strong>
+                    <span id="mealReviews">(189 reviews)</span>
+                </div>
+
+                <div class="recipe-stats">
+
+                    <div class="stat">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Prep Time</span>
+                        <strong id="prepTime"></strong>
+                    </div>
+
+                    <div class="stat">
+                        <i class="fa-solid fa-fire-burner"></i>
+                        <span>Cook Time</span>
+                        <strong id="cookTime"></strong>
+                    </div>
+
+                    <div class="stat">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Servings</span>
+                        <strong id="servings"></strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            
+
+            <div class="recipe-content">
+
+                <div class="recipe-top">
+
+                    <div class="recipe-tags">
+                        <span class="difficulty" id="mealDifficulty">Easy</span>
+                        <span class="cuisine" id="mealCuisine">Italian</span>
+                    </div>
+
+                    <div class="recipe-actions">
+
+                        <button id="saveBtn" title="Save Recipe">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+
+                        <button id="shareBtn" title="Share Recipe">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="recipe-heading">
+
+                    <h1 id="mealName">Caprese Sandwich</h1>
+
+                    <p id="mealDescription">
+                        Fresh Italian sandwich with mozzarella, tomato, and basil
+                    </p>
+
+                </div>
+
+
+             
+
+                <div class="tabs">
+
+                    <button class="tab active" data-tab="ingredients">
+                        <i class="fa-solid fa-list-check"></i>
+                        Ingredients
+                    </button>
+
+                    <button class="tab" data-tab="instructions">
+                        <i class="fa-solid fa-book-open"></i>
+                        Instructions
+                    </button>
+
+                    <button class="tab" data-tab="nutrition">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        Nutrition
+                    </button>
+
+                    <button class="tab" data-tab="tips">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        Chef's Tips
+                    </button>
+
+                </div>
+
+
+                
+
+                <div class="tab-content">
+
+                    <div id="ingredients" class="tab-panel active">
+
+                        <ul id="ingredientsList" class="ingredients-list"></ul>
+
+                    </div>
+
+                    <div id="instructions" class="tab-panel">
+
+                        <ol id="instructionsList" class="instructions-list"></ol>
+
+                    </div>
+
+                    <div id="nutrition" class="tab-panel">
+
+                        <div id="nutritionList" class="nutrition-list"></div>
+
+                    </div>
+
+                    <div id="tips" class="tab-panel">
+
+                        <div id="tipsList" class="tips-list"></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FOOTER BUTTON -->
+
+                <div class="recipe-footer">
+
+                    <button id="randomBtn">
+                        <i class="fa-solid fa-rotate"></i>
+                        Try Another Recipe
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <p class="footer-text">
+            Made with <i class="fa-solid fa-heart"></i> for food lovers.
+        </p>
+
+    </main>
+
+
+    <script src="main.js"></script>
+
+</body>
+</html>
